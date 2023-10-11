@@ -1,21 +1,99 @@
 version: 1
+## 内置账户
 accounts:
-- name: alice
+- name: validator0
   coins:
-  - 20000token
-  - 200000000stake
-- name: bob
+  - 210000000000uhby
+  - 200000000000ushby
+- name: validator1
   coins:
-  - 10000token
-  - 100000000stake
+  - 210000000000uhby
+  - 200000000000ushby
+- name: validator2
+  coins:
+  - 210000000000uhby
+  - 200000000000ushby
+- name: validator3
+  coins:
+  - 210000000000uhby
+  - 200000000000ushby
+- name: validator4
+  coins:
+  - 210000000000uhby
+  - 200000000000ushby
 client:
   openapi:
     path: docs/static/openapi.yml
-faucet:
-  name: bob
-  coins:
-  - 5token
-  - 100000stake
 validators:
-- name: alice
-  bonded: 100000000stake
+## 验证人
+- name: validator0
+  ## 抵押金额(20万)
+  bonded: 200000000000uhby
+  home: ""
+  app:
+     minimum-gas-prices: "0.000002ushby" ## 最低gas价格
+     api:
+         enable: true
+         enabled-unsafe-cors: true
+         address: "tcp://0.0.0.0:1317"
+     grpc:
+         enable: true
+         address: "0.0.0.0:9090"
+     grpc-web:
+         address: "0.0.0.0:9091"
+         enable: true
+         enable-unsafe-cors: true
+  config:
+     consensus:
+         ## 出块时间（秒）
+         timeout_commit: "5s"
+     proxy_app: "tcp://0.0.0.0:26658"
+     moniker: "node0"
+     rpc:
+         laddr: "tcp://0.0.0.0:26657"
+     p2p:
+         laddr: "tcp://0.0.0.0:26656"
+         persistent_peers: ""
+     instrumentation:
+         # 是否开启普罗米修斯监控
+         prometheus: true
+         # 普罗米修斯监听端口
+         prometheus_listen_addr: ":26660"
+genesis:
+  app_state:
+    staking:
+      params:
+        ## 质押代币名称
+        bond_denom: "uhby"
+        ## 最大验证人数量
+        max_validators: "500"
+        ## min_commission_rate: "0.05"
+    mint:
+      minter:
+        ## 年度准备金
+        annual_provisions: "0.000000000000000000"
+        ## 通胀率
+        inflation: "0.013000000000000000"
+      params:
+        ## 铸造代币名称
+        mint_denom: "ushby"
+    gov:
+      params:
+        ## 提案进入投票期所需的最低存款
+        min_deposit:
+          - amount: "10000000000"
+            denom: "ushby"
+    distribution:
+      params:
+        ## 基础矿工奖励比例（百分比）
+        base_proposer_reward: "0.010000000000000000"
+        ## 最大矿工奖励比例（百分比）
+        bonus_proposer_reward: "0.040000000000000000"
+        ## 社区收税（百分比）
+        community_tax: "0.020000000000000000"
+        ## 是否允许验证人使用其他地址提币
+        withdraw_addr_enabled: true
+    crisis:
+      constant_fee:
+        amount: "10000000000"
+        denom: "ushby"
