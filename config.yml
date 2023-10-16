@@ -54,6 +54,7 @@ validators:
      p2p:
          laddr: "tcp://0.0.0.0:26656"
          persistent_peers: ""
+         allow_duplicate_ip: true
      instrumentation:
          # 是否开启普罗米修斯监控
          prometheus: true
