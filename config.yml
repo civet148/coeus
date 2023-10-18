@@ -4,23 +4,23 @@ accounts:
 - name: validator0
   coins:
   - 210000000000uhby
-  - 200000000000ushby
+#  - 200000000000ushby
 - name: validator1
   coins:
   - 210000000000uhby
-  - 200000000000ushby
+#  - 200000000000ushby
 - name: validator2
   coins:
   - 210000000000uhby
-  - 200000000000ushby
+#  - 200000000000ushby
 - name: validator3
   coins:
   - 210000000000uhby
-  - 200000000000ushby
+#  - 200000000000ushby
 - name: validator4
   coins:
   - 210000000000uhby
-  - 200000000000ushby
+#  - 200000000000ushby
 client:
   openapi:
     path: docs/static/openapi.yml
@@ -31,7 +31,7 @@ validators:
   bonded: 200000000000uhby
   home: ""
   app:
-     minimum-gas-prices: "0.000002ushby" ## 最低gas价格
+     minimum-gas-prices: "0.000002ushby,0.0ubhy" ## 最低gas价格
      api:
          enable: true
          enabled-unsafe-cors: true
@@ -71,13 +71,22 @@ genesis:
         ## min_commission_rate: "0.05"
     mint:
       minter:
-        ## 年度准备金
+        ## 高度年度挖矿产量
         annual_provisions: "0.000000000000000000"
-        ## 通胀率
-        inflation: "0.013000000000000000"
+        ## 挖矿产出通胀率
+        inflation: "0.000000000000000000"
       params:
         ## 铸造代币名称
         mint_denom: "ushby"
+        ## 年度产出区块数量
+        blocks_per_year: "6311520"
+        goal_bonded: "0.670000000000000000"
+        ## 最大通胀率
+        inflation_max: "0.200000000000000000"
+        ## 最小通胀率
+        inflation_min: "0.070000000000000000"
+        ## 通胀变化率
+        inflation_rate_change: "0.130000000000000000"
     gov:
       params:
         ## 提案进入投票期所需的最低存款
@@ -96,5 +105,5 @@ genesis:
         withdraw_addr_enabled: true
     crisis:
       constant_fee:
-        amount: "10000000000"
+        amount: "10000000"
         denom: "ushby"
