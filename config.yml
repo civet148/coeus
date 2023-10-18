@@ -31,7 +31,7 @@ validators:
   bonded: 200000000000uhby
   home: ""
   app:
-     minimum-gas-prices: "0.000002ushby,0.0uhby" ## 最低gas价格
+     minimum-gas-prices: "0.000002ushby,0.000002uhby" ## 最低gas价格
      api:
          enable: true
          enabled-unsafe-cors: true
