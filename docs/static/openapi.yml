@@ -61944,14 +61944,14 @@ definitions:
        - VOTE_OPTION_ABSTAIN: VOTE_OPTION_ABSTAIN defines an abstain vote option.
        - VOTE_OPTION_NO: VOTE_OPTION_NO defines a no vote option.
        - VOTE_OPTION_NO_WITH_VETO: VOTE_OPTION_NO_WITH_VETO defines a no with veto vote option.
-  cosmos.mint.v1beta1.MsgUpdateParamsResponse:
+  coues.mint.v1beta1.MsgUpdateParamsResponse:
     type: object
     description: |-
       MsgUpdateParamsResponse defines the response structure for executing a
       MsgUpdateParams message.
 
       Since: cosmos-sdk 0.47
-  cosmos.mint.v1beta1.Params:
+  coues.mint.v1beta1.Params:
     type: object
     properties:
       mint_denom:
@@ -61974,7 +61974,7 @@ definitions:
         format: uint64
         title: expected blocks per year
     description: Params defines the parameters for the x/mint module.
-  cosmos.mint.v1beta1.QueryAnnualProvisionsResponse:
+  coues.mint.v1beta1.QueryAnnualProvisionsResponse:
     type: object
     properties:
       annual_provisions:
@@ -61984,7 +61984,7 @@ definitions:
     description: |-
       QueryAnnualProvisionsResponse is the response type for the
       Query/AnnualProvisions RPC method.
-  cosmos.mint.v1beta1.QueryInflationResponse:
+  coues.mint.v1beta1.QueryInflationResponse:
     type: object
     properties:
       inflation:
@@ -61994,7 +61994,7 @@ definitions:
     description: |-
       QueryInflationResponse is the response type for the Query/Inflation RPC
       method.
-  cosmos.mint.v1beta1.QueryParamsResponse:
+  coues.mint.v1beta1.QueryParamsResponse:
     type: object
     properties:
       params:

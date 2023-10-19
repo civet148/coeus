@@ -23,7 +23,7 @@ accounts:
 #  - 200000000000ushby
 client:
   openapi:
-    path: docs/static/openapi.yml
+    #path: docs/static/openapi.yml
 validators:
 ## 验证人
 - name: validator0
