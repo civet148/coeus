@@ -2,6 +2,8 @@ package types
 
 import (
 	"fmt"
+	"github.com/cosmos/cosmos-sdk/types"
+	stdmath "math"
 
 	"cosmossdk.io/math"
 
@@ -79,4 +81,45 @@ func (m Minter) NextAnnualProvisions(_ Params, totalSupply math.Int) math.Legacy
 func (m Minter) BlockProvision(params Params) sdk.Coin {
 	provisionAmt := m.AnnualProvisions.QuoInt(sdk.NewInt(int64(params.BlocksPerYear)))
 	return sdk.NewCoin(params.MintDenom, provisionAmt.TruncateInt())
+}
+
+// BlockReward returns the rewards for a block based on the reduction
+func (m Minter) BlockProvisionReduction(blockEpoch uint64, reduction *Reduction, left math.LegacyDec) (reward math.LegacyDec) {
+	var pos, last int
+	var prevHeight, curHeight uint64
+
+	if blockEpoch == 0 {
+		return
+	}
+
+	last = len(reduction.Heights) - 1
+
+	// if the block epoch is greater than last reduction height and left is not 0, just return left amount as reward
+	if blockEpoch > reduction.Heights[last] {
+		return left
+	}
+
+	for i, h := range reduction.Heights {
+		if blockEpoch <= h {
+			pos = i
+			curHeight = h
+			if i > 0 {
+				prevHeight = reduction.Heights[i-1]
+			}
+			break
+		}
+	}
+
+	pow := int64(stdmath.Pow(2, float64(pos+1)))
+
+	totalProvisions := reduction.TotalProvisions
+	periodProvisions := totalProvisions.QuoInt64(pow)
+	if pos == last {
+		yp := periodProvisions
+		periodProvisions = yp.Add(left)
+	}
+	epochs := curHeight - prevHeight
+	reward = periodProvisions.QuoInt64(int64(epochs))
+	reward = types.NewDecWithPrec(reward.TruncateInt64(), 0)
+	return reward
 }
