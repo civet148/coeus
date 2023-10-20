@@ -84,10 +84,10 @@ func (m Minter) BlockProvision(params Params) sdk.Coin {
 }
 
 // BlockReward returns the rewards for a block based on the reduction
-func (m Minter) BlockProvisionReduction(blockEpoch uint64, reduction *Reduction, left math.LegacyDec) (reward math.LegacyDec) {
+func (m Minter) BlockProvisionReduction(blockEpoch uint64, params Params, left math.LegacyDec) (reward math.LegacyDec) {
 	var pos, last int
 	var prevHeight, curHeight uint64
-
+	var reduction = params.Reduction
 	if blockEpoch == 0 {
 		return
 	}
