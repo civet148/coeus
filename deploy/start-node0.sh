@@ -1,7 +1,7 @@
 #!/bin/sh
 IMAGE_URL='coeus-node:latest'
 CONTAINER_NAME=coeus-node0
-DATA_DIR=/data/coeus/node0
+DATA_DIR=/data/node0
 
 docker rm -f $CONTAINER_NAME
 
