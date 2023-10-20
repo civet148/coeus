@@ -46,7 +46,7 @@ validators:
   config:
      consensus:
          ## 出块时间（秒）
-         timeout_commit: "5s"
+         timeout_commit: "7s"
      proxy_app: "tcp://0.0.0.0:26658"
      moniker: "node0"
      rpc:
