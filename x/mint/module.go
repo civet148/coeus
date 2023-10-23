@@ -213,8 +213,8 @@ func (am AppModule) checkGenesisState(genesisState types.GenesisState) (err erro
 	reduct := genesisState.Params.Reduction
 	if reduct.Enable {
 		//check total provisions and reduction heights
-		if reduct.TotalProvisions.IsZero() || len(reduct.Heights) == 0 {
-			err = fmt.Errorf("reduction is enabled but total provisions or half reduction heights is empty")
+		if reduct.TotalProvisions.IsZero() || len(reduct.Heights) <= 1 {
+			err = fmt.Errorf("reduction is enabled but total provisions or half reduction heights %v not enough", len(reduct.Heights))
 			log.Fatalf(err.Error())
 			return err
 		}
@@ -224,7 +224,7 @@ func (am AppModule) checkGenesisState(genesisState types.GenesisState) (err erro
 			hm[height] = i
 		}
 		sort.Slice(reduct.Heights, func(i, j int) bool {
-			if reduct.Heights[i] > reduct.Heights[j] {
+			if reduct.Heights[j] > reduct.Heights[i] {
 				return true
 			}
 			return false

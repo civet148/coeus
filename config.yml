@@ -1,5 +1,4 @@
 version: 1
-## 内置账户
 accounts:
 - name: validator0
   coins:
@@ -25,13 +24,11 @@ client:
   openapi:
     #path: docs/static/openapi.yml
 validators:
-## 验证人
 - name: validator0
-  ## 抵押金额(20万)
   bonded: 200000000000uhby
   home: ""
   app:
-     minimum-gas-prices: "0.000002ushby,0.000002uhby" ## 最低gas价格
+     minimum-gas-prices: "0.000002ushby,0.000002uhby"
      api:
          enable: true
          enabled-unsafe-cors: true
@@ -45,7 +42,6 @@ validators:
          enable-unsafe-cors: true
   config:
      consensus:
-         ## 出块时间（秒）
          timeout_commit: "7s"
      proxy_app: "tcp://0.0.0.0:26658"
      moniker: "node0"
@@ -56,52 +52,40 @@ validators:
          persistent_peers: ""
          allow_duplicate_ip: true
      instrumentation:
-         # 是否开启普罗米修斯监控
          prometheus: true
-         # 普罗米修斯监听端口
          prometheus_listen_addr: ":26660"
 genesis:
   app_state:
     staking:
       params:
-        ## 质押代币名称
         bond_denom: "uhby"
-        ## 最大验证人数量
         max_validators: "500"
         ## min_commission_rate: "0.05"
     mint:
       minter:
-        ## 高度年度挖矿产量
         annual_provisions: "0.000000000000000000"
-        ## 挖矿产出通胀率
         inflation: "0.000000000000000000"
       params:
-        ## 铸造代币名称
         mint_denom: "ushby"
-        ## 年度产出区块数量
-        blocks_per_year: "6311520"
+        blocks_per_year: "4505142"
         goal_bonded: "0.670000000000000000"
-        ## 最大通胀率
         inflation_max: "0.200000000000000000"
-        ## 最小通胀率
         inflation_min: "0.070000000000000000"
-        ## 通胀变化率
         inflation_rate_change: "0.130000000000000000"
+        reduction:
+          enable: true
+          total_provisions: "500000000000000"
+          heights: [ 9010284, 18020568, 27030852, 36041136, 45051420 ]
     gov:
       params:
-        ## 提案进入投票期所需的最低存款
         min_deposit:
           - amount: "10000000000"
             denom: "ushby"
     distribution:
       params:
-        ## 基础矿工奖励比例（百分比）
         base_proposer_reward: "0.010000000000000000"
-        ## 最大矿工奖励比例（百分比）
         bonus_proposer_reward: "0.040000000000000000"
-        ## 社区收税（百分比）
-        community_tax: "0.020000000000000000"
-        ## 是否允许验证人使用其他地址提币
+        community_tax: "0.000000000000000000"
         withdraw_addr_enabled: true
     crisis:
       constant_fee:
