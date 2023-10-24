@@ -56,6 +56,32 @@ validators:
          prometheus_listen_addr: ":26660"
 genesis:
   app_state:
+    bank:
+      denom_metadata:
+        - description: "The native staking token"
+          base: "uhby"
+          display: "hby"
+          name: "staking token"
+          symbol: "HBY"
+          denom_units:
+           - aliases: [ ]
+             denom: "uhby"
+             exponent: 0
+           - aliases: [ ]
+             denom: "hby"
+             exponent: 6
+        - description: "The native gov token"
+          base: "ushby"
+          display: "shby"
+          name: "mint token"
+          symbol: "SHBY"
+          denom_units:
+           - aliases: [ ]
+             denom: "ushby"
+             exponent: 0
+           - aliases: [ ]
+             denom: "shby"
+             exponent: 6
     staking:
       params:
         bond_denom: "uhby"
