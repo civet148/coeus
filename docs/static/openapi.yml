@@ -40,6 +40,84 @@ paths:
                   additionalProperties: {}
       tags:
         - Query
+  /coeus/mint/v1beta1/annual_provisions:
+    get:
+      summary: AnnualProvisions current minting annual provisions value.
+      operationId: CoeusMintV1Beta1AnnualProvisions
+      responses:
+        '200':
+          description: A successful response.
+          schema:
+            type: object
+            properties:
+              annual_provisions:
+                type: string
+                format: byte
+                description: >-
+                  annual_provisions is the current minting annual provisions
+                  value.
+            description: |-
+              QueryAnnualProvisionsResponse is the response type for the
+              Query/AnnualProvisions RPC method.
+        default:
+          description: An unexpected error response.
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+                format: int32
+              message:
+                type: string
+              details:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    '@type':
+                      type: string
+                  additionalProperties: {}
+      tags:
+        - Query
+  /coeus/mint/v1beta1/inflation:
+    get:
+      summary: Inflation returns the current minting inflation value.
+      operationId: CoeusMintV1Beta1Inflation
+      responses:
+        '200':
+          description: A successful response.
+          schema:
+            type: object
+            properties:
+              inflation:
+                type: string
+                format: byte
+                description: inflation is the current minting inflation value.
+            description: >-
+              QueryInflationResponse is the response type for the
+              Query/Inflation RPC
+
+              method.
+        default:
+          description: An unexpected error response.
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+                format: int32
+              message:
+                type: string
+              details:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    '@type':
+                      type: string
+                  additionalProperties: {}
+      tags:
+        - Query
   /cosmos/auth/v1beta1/account_info/{address}:
     get:
       summary: AccountInfo queries account info which is common to all account types.
@@ -46807,6 +46885,130 @@ definitions:
                   "@type": "type.googleapis.com/google.protobuf.Duration",
                   "value": "1.212s"
                 }
+  coeus.mint.v1beta1.MsgUpdateParamsResponse:
+    type: object
+    description: |-
+      MsgUpdateParamsResponse defines the response structure for executing a
+      MsgUpdateParams message.
+
+      Since: cosmos-sdk 0.47
+  coeus.mint.v1beta1.Params:
+    type: object
+    properties:
+      mint_denom:
+        type: string
+        title: type of coin to mint
+      inflation_rate_change:
+        type: string
+        title: maximum annual change in inflation rate
+      inflation_max:
+        type: string
+        title: maximum inflation rate
+      inflation_min:
+        type: string
+        title: minimum inflation rate
+      goal_bonded:
+        type: string
+        title: goal of percent bonded atoms
+      blocks_per_year:
+        type: string
+        format: uint64
+        title: expected blocks per year
+      reduction:
+        title: reduction
+        type: object
+        properties:
+          enable:
+            type: boolean
+            title: enable reduction
+          total_provisions:
+            type: string
+            title: total provisions of mint token
+          heights:
+            type: array
+            items:
+              type: string
+              format: uint64
+            title: half reduction heights
+    description: Params defines the parameters for the x/mint module.
+  coeus.mint.v1beta1.QueryAnnualProvisionsResponse:
+    type: object
+    properties:
+      annual_provisions:
+        type: string
+        format: byte
+        description: annual_provisions is the current minting annual provisions value.
+    description: |-
+      QueryAnnualProvisionsResponse is the response type for the
+      Query/AnnualProvisions RPC method.
+  coeus.mint.v1beta1.QueryInflationResponse:
+    type: object
+    properties:
+      inflation:
+        type: string
+        format: byte
+        description: inflation is the current minting inflation value.
+    description: |-
+      QueryInflationResponse is the response type for the Query/Inflation RPC
+      method.
+  coeus.mint.v1beta1.QueryParamsResponse:
+    type: object
+    properties:
+      params:
+        description: params defines the parameters of the module.
+        type: object
+        properties:
+          mint_denom:
+            type: string
+            title: type of coin to mint
+          inflation_rate_change:
+            type: string
+            title: maximum annual change in inflation rate
+          inflation_max:
+            type: string
+            title: maximum inflation rate
+          inflation_min:
+            type: string
+            title: minimum inflation rate
+          goal_bonded:
+            type: string
+            title: goal of percent bonded atoms
+          blocks_per_year:
+            type: string
+            format: uint64
+            title: expected blocks per year
+          reduction:
+            title: reduction
+            type: object
+            properties:
+              enable:
+                type: boolean
+                title: enable reduction
+              total_provisions:
+                type: string
+                title: total provisions of mint token
+              heights:
+                type: array
+                items:
+                  type: string
+                  format: uint64
+                title: half reduction heights
+    description: QueryParamsResponse is the response type for the Query/Params RPC method.
+  coeus.mint.v1beta1.Reduction:
+    type: object
+    properties:
+      enable:
+        type: boolean
+        title: enable reduction
+      total_provisions:
+        type: string
+        title: total provisions of mint token
+      heights:
+        type: array
+        items:
+          type: string
+          format: uint64
+        title: half reduction heights
   cosmos.auth.v1beta1.AddressBytesToStringResponse:
     type: object
     properties:
@@ -61944,14 +62146,14 @@ definitions:
        - VOTE_OPTION_ABSTAIN: VOTE_OPTION_ABSTAIN defines an abstain vote option.
        - VOTE_OPTION_NO: VOTE_OPTION_NO defines a no vote option.
        - VOTE_OPTION_NO_WITH_VETO: VOTE_OPTION_NO_WITH_VETO defines a no with veto vote option.
-  coues.mint.v1beta1.MsgUpdateParamsResponse:
+  cosmos.mint.v1beta1.MsgUpdateParamsResponse:
     type: object
     description: |-
       MsgUpdateParamsResponse defines the response structure for executing a
       MsgUpdateParams message.
 
       Since: cosmos-sdk 0.47
-  coues.mint.v1beta1.Params:
+  cosmos.mint.v1beta1.Params:
     type: object
     properties:
       mint_denom:
@@ -61974,7 +62176,7 @@ definitions:
         format: uint64
         title: expected blocks per year
     description: Params defines the parameters for the x/mint module.
-  coues.mint.v1beta1.QueryAnnualProvisionsResponse:
+  cosmos.mint.v1beta1.QueryAnnualProvisionsResponse:
     type: object
     properties:
       annual_provisions:
@@ -61984,7 +62186,7 @@ definitions:
     description: |-
       QueryAnnualProvisionsResponse is the response type for the
       Query/AnnualProvisions RPC method.
-  coues.mint.v1beta1.QueryInflationResponse:
+  cosmos.mint.v1beta1.QueryInflationResponse:
     type: object
     properties:
       inflation:
@@ -61994,7 +62196,7 @@ definitions:
     description: |-
       QueryInflationResponse is the response type for the Query/Inflation RPC
       method.
-  coues.mint.v1beta1.QueryParamsResponse:
+  cosmos.mint.v1beta1.QueryParamsResponse:
     type: object
     properties:
       params:

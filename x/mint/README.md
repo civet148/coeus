@@ -318,13 +318,13 @@ A user can query the `mint` module using REST endpoints.
 #### annual-provisions
 
 ```shell
-/cosmos/mint/v1beta1/annual_provisions
+/coeus/mint/v1beta1/annual_provisions
 ```
 
 Example:
 
 ```shell
-curl "localhost:1317/cosmos/mint/v1beta1/annual_provisions"
+curl "localhost:1317/coeus/mint/v1beta1/annual_provisions"
 ```
 
 Example Output:
@@ -338,13 +338,13 @@ Example Output:
 #### inflation
 
 ```shell
-/cosmos/mint/v1beta1/inflation
+/coeus/mint/v1beta1/inflation
 ```
 
 Example:
 
 ```shell
-curl "localhost:1317/cosmos/mint/v1beta1/inflation"
+curl "localhost:1317/coeus/mint/v1beta1/inflation"
 ```
 
 Example Output:
@@ -358,13 +358,13 @@ Example Output:
 #### params
 
 ```shell
-/cosmos/mint/v1beta1/params
+/coeus/mint/v1beta1/inflation
 ```
 
 Example:
 
 ```shell
-curl "localhost:1317/cosmos/mint/v1beta1/params"
+curl "localhost:1317/coeus/mint/v1beta1/inflation"
 ```
 
 Example Output:
