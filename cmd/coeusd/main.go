@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+	"github.com/cosmos/cosmos-sdk/version"
 	"os"
 
 	"github.com/cosmos/cosmos-sdk/server"
@@ -10,7 +12,17 @@ import (
 	"coeus/cmd/coeusd/cmd"
 )
 
+const (
+	Version = "v0.1.0"
+)
+
+var (
+	BuildTime = "2023-10-24"
+	GitCommit = ""
+)
+
 func main() {
+	version.Version = fmt.Sprintf("%s %s %s", Version, BuildTime, GitCommit)
 	rootCmd, _ := cmd.NewRootCmd()
 	if err := svrcmd.Execute(rootCmd, "", app.DefaultNodeHome); err != nil {
 		switch e := err.(type) {
