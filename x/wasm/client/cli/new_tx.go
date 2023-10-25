@@ -11,7 +11,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	"github.com/cosmos/cosmos-sdk/client/tx"
 
-	"github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/x/wasm/types"
 )
 
 // MigrateContractCmd will migrate a contract to a new code version

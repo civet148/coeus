@@ -15,8 +15,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/address"
 
-	"github.com/civet148/coeus-node/x/wasm/keeper"
-	"github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/x/wasm/keeper"
+	"github.com/civet148/coeus/x/wasm/types"
 )
 
 func TestOnRecvPacket(t *testing.T) {

@@ -10,7 +10,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/store"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/x/wasm/types"
 )
 
 func TestSelectAuthorizationPolicy(t *testing.T) {

@@ -22,8 +22,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/gov/client/cli"
 	v1 "github.com/cosmos/cosmos-sdk/x/gov/types/v1"
 
-	"github.com/civet148/coeus-node/x/wasm/ioutils"
-	"github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/x/wasm/ioutils"
+	"github.com/civet148/coeus/x/wasm/types"
 )
 
 // DefaultGovAuthority is set to the gov module address.

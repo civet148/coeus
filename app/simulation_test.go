@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	minttypes "github.com/civet148/coeus-node/x/mint/types"
+	minttypes "github.com/civet148/coeus/x/mint/types"
 	dbm "github.com/cometbft/cometbft-db"
 	abci "github.com/cometbft/cometbft/abci/types"
 	"github.com/cometbft/cometbft/libs/log"
@@ -36,7 +36,7 @@ import (
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/civet148/coeus-node/app"
+	"github.com/civet148/coeus/app"
 )
 
 type storeKeysPrefixes struct {

@@ -7,7 +7,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	capabilitytypes "github.com/cosmos/cosmos-sdk/x/capability/types"
 
-	"github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/x/wasm/types"
 )
 
 type MockChannelKeeper struct {

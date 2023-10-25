@@ -19,8 +19,8 @@ import (
 	stakingkeeper "github.com/cosmos/cosmos-sdk/x/staking/keeper"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	"github.com/civet148/coeus-node/x/wasm/keeper/testdata"
-	wasmtypes "github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/x/wasm/keeper/testdata"
+	wasmtypes "github.com/civet148/coeus/x/wasm/types"
 )
 
 type StakingInitMsg struct {

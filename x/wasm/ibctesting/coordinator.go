@@ -11,7 +11,7 @@ import (
 	ibctesting "github.com/cosmos/ibc-go/v7/testing"
 	"github.com/stretchr/testify/require"
 
-	wasmkeeper "github.com/civet148/coeus-node/x/wasm/keeper"
+	wasmkeeper "github.com/civet148/coeus/x/wasm/keeper"
 )
 
 var (

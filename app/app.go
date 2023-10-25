@@ -3,9 +3,9 @@ package app
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/civet148/coeus-node/x/wasm"
-	wasmkeeper "github.com/civet148/coeus-node/x/wasm/keeper"
-	wasmtypes "github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/x/wasm"
+	wasmkeeper "github.com/civet148/coeus/x/wasm/keeper"
+	wasmtypes "github.com/civet148/coeus/x/wasm/types"
 	tmproto "github.com/cometbft/cometbft/proto/tendermint/types"
 	"github.com/cosmos/cosmos-sdk/store/streaming"
 	"github.com/cosmos/cosmos-sdk/x/auth/posthandler"
@@ -18,9 +18,9 @@ import (
 
 	autocliv1 "cosmossdk.io/api/cosmos/autocli/v1"
 	reflectionv1 "cosmossdk.io/api/cosmos/reflection/v1"
-	"github.com/civet148/coeus-node/x/mint"
-	mintkeeper "github.com/civet148/coeus-node/x/mint/keeper"
-	minttypes "github.com/civet148/coeus-node/x/mint/types"
+	"github.com/civet148/coeus/x/mint"
+	mintkeeper "github.com/civet148/coeus/x/mint/keeper"
+	minttypes "github.com/civet148/coeus/x/mint/types"
 	dbm "github.com/cometbft/cometbft-db"
 	abci "github.com/cometbft/cometbft/abci/types"
 	"github.com/cometbft/cometbft/libs/log"
@@ -124,13 +124,13 @@ import (
 	ibctm "github.com/cosmos/ibc-go/v7/modules/light-clients/07-tendermint"
 	"github.com/spf13/cast"
 
-	coeusmodule "github.com/civet148/coeus-node/x/coeus"
-	coeusmodulekeeper "github.com/civet148/coeus-node/x/coeus/keeper"
-	coeusmoduletypes "github.com/civet148/coeus-node/x/coeus/types"
+	coeusmodule "github.com/civet148/coeus/x/coeus"
+	coeusmodulekeeper "github.com/civet148/coeus/x/coeus/keeper"
+	coeusmoduletypes "github.com/civet148/coeus/x/coeus/types"
 	// this line is used by starport scaffolding # stargate/app/moduleImport
 
-	appparams "github.com/civet148/coeus-node/app/params"
-	"github.com/civet148/coeus-node/docs"
+	appparams "github.com/civet148/coeus/app/params"
+	"github.com/civet148/coeus/docs"
 )
 
 const (
@@ -552,7 +552,7 @@ func New(
 
 	app.GovKeeper = *govKeeper.SetHooks(
 		govtypes.NewMultiGovHooks(
-		// register the governance hooks
+			// register the governance hooks
 		),
 	)
 

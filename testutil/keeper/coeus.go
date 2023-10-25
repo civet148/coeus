@@ -3,8 +3,8 @@ package keeper
 import (
 	"testing"
 
-	"github.com/civet148/coeus-node/x/coeus/keeper"
-	"github.com/civet148/coeus-node/x/coeus/types"
+	"github.com/civet148/coeus/x/coeus/keeper"
+	"github.com/civet148/coeus/x/coeus/types"
 	tmdb "github.com/cometbft/cometbft-db"
 	"github.com/cometbft/cometbft/libs/log"
 	tmproto "github.com/cometbft/cometbft/proto/tendermint/types"

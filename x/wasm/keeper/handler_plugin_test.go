@@ -20,8 +20,8 @@ import (
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	capabilitytypes "github.com/cosmos/cosmos-sdk/x/capability/types"
 
-	"github.com/civet148/coeus-node/x/wasm/keeper/wasmtesting"
-	"github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/x/wasm/keeper/wasmtesting"
+	"github.com/civet148/coeus/x/wasm/types"
 )
 
 func TestMessageHandlerChainDispatch(t *testing.T) {

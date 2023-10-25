@@ -11,8 +11,8 @@ import (
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 	"github.com/cosmos/cosmos-sdk/x/auth/ante"
 
-	wasmkeeper "github.com/civet148/coeus-node/x/wasm/keeper"
-	wasmTypes "github.com/civet148/coeus-node/x/wasm/types"
+	wasmkeeper "github.com/civet148/coeus/x/wasm/keeper"
+	wasmTypes "github.com/civet148/coeus/x/wasm/types"
 )
 
 // HandlerOptions extend the SDK's AnteHandler options by requiring the IBC

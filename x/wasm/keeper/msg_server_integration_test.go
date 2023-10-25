@@ -15,9 +15,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil/testdata"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/civet148/coeus-node/app"
-	"github.com/civet148/coeus-node/x/wasm/keeper"
-	"github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/app"
+	"github.com/civet148/coeus/x/wasm/keeper"
+	"github.com/civet148/coeus/x/wasm/types"
 )
 
 //go:embed testdata/reflect.wasm

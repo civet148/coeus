@@ -16,11 +16,11 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	app2 "github.com/civet148/coeus-node/app"
-	wasmibctesting "github.com/civet148/coeus-node/x/wasm/ibctesting"
-	wasmkeeper "github.com/civet148/coeus-node/x/wasm/keeper"
-	"github.com/civet148/coeus-node/x/wasm/keeper/wasmtesting"
-	wasmtypes "github.com/civet148/coeus-node/x/wasm/types"
+	app2 "github.com/civet148/coeus/app"
+	wasmibctesting "github.com/civet148/coeus/x/wasm/ibctesting"
+	wasmkeeper "github.com/civet148/coeus/x/wasm/keeper"
+	"github.com/civet148/coeus/x/wasm/keeper/wasmtesting"
+	wasmtypes "github.com/civet148/coeus/x/wasm/types"
 )
 
 const (

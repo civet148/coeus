@@ -7,9 +7,9 @@ import (
 	"cosmossdk.io/math"
 	"github.com/stretchr/testify/require"
 
-	"github.com/civet148/coeus-node/x/mint"
-	"github.com/civet148/coeus-node/x/mint/simulation"
-	"github.com/civet148/coeus-node/x/mint/types"
+	"github.com/civet148/coeus/x/mint"
+	"github.com/civet148/coeus/x/mint/simulation"
+	"github.com/civet148/coeus/x/mint/types"
 	"github.com/cosmos/cosmos-sdk/types/kv"
 	moduletestutil "github.com/cosmos/cosmos-sdk/types/module/testutil"
 )

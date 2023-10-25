@@ -9,9 +9,9 @@ import (
 
 	"cosmossdk.io/math"
 	sdkmath "cosmossdk.io/math"
-	"github.com/civet148/coeus-node/x/mint"
-	"github.com/civet148/coeus-node/x/mint/simulation"
-	"github.com/civet148/coeus-node/x/mint/types"
+	"github.com/civet148/coeus/x/mint"
+	"github.com/civet148/coeus/x/mint/simulation"
+	"github.com/civet148/coeus/x/mint/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
 	moduletestutil "github.com/cosmos/cosmos-sdk/types/module/testutil"

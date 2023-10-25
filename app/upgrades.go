@@ -5,7 +5,7 @@ import (
 	icahosttypes "github.com/cosmos/ibc-go/v7/modules/apps/27-interchain-accounts/host/types"
 	ibctransfertypes "github.com/cosmos/ibc-go/v7/modules/apps/transfer/types"
 
-	minttypes "github.com/civet148/coeus-node/x/mint/types"
+	minttypes "github.com/civet148/coeus/x/mint/types"
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
@@ -22,7 +22,7 @@ import (
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 	upgradetypes "github.com/cosmos/cosmos-sdk/x/upgrade/types"
 
-	wasmtypes "github.com/civet148/coeus-node/x/wasm/types"
+	wasmtypes "github.com/civet148/coeus/x/wasm/types"
 )
 
 // UpgradeName defines the on-chain upgrade name for the sample SimApp upgrade

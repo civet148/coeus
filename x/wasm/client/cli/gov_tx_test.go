@@ -8,8 +8,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/civet148/coeus-node/x/wasm/keeper/testdata"
-	"github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/x/wasm/keeper/testdata"
+	"github.com/civet148/coeus/x/wasm/types"
 )
 
 func TestParseAccessConfigUpdates(t *testing.T) {

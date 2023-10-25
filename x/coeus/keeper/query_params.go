@@ -3,7 +3,7 @@ package keeper
 import (
 	"context"
 
-	"github.com/civet148/coeus-node/x/coeus/types"
+	"github.com/civet148/coeus/x/coeus/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

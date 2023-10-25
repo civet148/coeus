@@ -33,10 +33,10 @@ import (
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	"github.com/civet148/coeus-node/app"
-	"github.com/civet148/coeus-node/x/wasm/keeper"
-	"github.com/civet148/coeus-node/x/wasm/keeper/wasmtesting"
-	"github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/app"
+	"github.com/civet148/coeus/x/wasm/keeper"
+	"github.com/civet148/coeus/x/wasm/keeper/wasmtesting"
+	"github.com/civet148/coeus/x/wasm/types"
 )
 
 func TestIBCQuerier(t *testing.T) {

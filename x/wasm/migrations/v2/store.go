@@ -5,8 +5,8 @@ import (
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/civet148/coeus-node/x/wasm/exported"
-	"github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/x/wasm/exported"
+	"github.com/civet148/coeus/x/wasm/types"
 )
 
 // MigrateStore migrates the x/wasm module state from the consensus version 2 to

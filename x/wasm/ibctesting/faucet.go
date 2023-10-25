@@ -9,7 +9,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 
-	"github.com/civet148/coeus-node/app"
+	"github.com/civet148/coeus/app"
 )
 
 // Fund an address with the given amount in default denom

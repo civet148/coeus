@@ -25,11 +25,11 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 
-	"github.com/civet148/coeus-node/x/wasm/client/cli"
-	"github.com/civet148/coeus-node/x/wasm/exported"
-	"github.com/civet148/coeus-node/x/wasm/keeper"
-	"github.com/civet148/coeus-node/x/wasm/simulation"
-	"github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/x/wasm/client/cli"
+	"github.com/civet148/coeus/x/wasm/exported"
+	"github.com/civet148/coeus/x/wasm/keeper"
+	"github.com/civet148/coeus/x/wasm/simulation"
+	"github.com/civet148/coeus/x/wasm/types"
 )
 
 var (

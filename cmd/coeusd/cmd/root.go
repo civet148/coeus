@@ -2,10 +2,10 @@ package cmd
 
 import (
 	"errors"
-	"github.com/civet148/coeus-node/app"
-	"github.com/civet148/coeus-node/x/wasm"
-	wasmkeeper "github.com/civet148/coeus-node/x/wasm/keeper"
-	wasmtypes "github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/app"
+	"github.com/civet148/coeus/x/wasm"
+	wasmkeeper "github.com/civet148/coeus/x/wasm/keeper"
+	wasmtypes "github.com/civet148/coeus/x/wasm/types"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/spf13/viper"
 	"io"
@@ -44,8 +44,8 @@ import (
 	"github.com/spf13/pflag"
 	// this line is used by starport scaffolding # root/moduleImport
 
-	appparams "github.com/civet148/coeus-node/app/params"
-	wasmcli "github.com/civet148/coeus-node/x/wasm/client/cli"
+	appparams "github.com/civet148/coeus/app/params"
+	wasmcli "github.com/civet148/coeus/x/wasm/client/cli"
 )
 
 // NewRootCmd creates a new root command for a Cosmos SDK application

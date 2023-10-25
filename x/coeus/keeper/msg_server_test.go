@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	keepertest "github.com/civet148/coeus-node/testutil/keeper"
-	"github.com/civet148/coeus-node/x/coeus/keeper"
-	"github.com/civet148/coeus-node/x/coeus/types"
+	keepertest "github.com/civet148/coeus/testutil/keeper"
+	"github.com/civet148/coeus/x/coeus/keeper"
+	"github.com/civet148/coeus/x/coeus/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 )

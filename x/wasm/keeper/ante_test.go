@@ -14,9 +14,9 @@ import (
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/civet148/coeus-node/x/wasm/keeper"
-	"github.com/civet148/coeus-node/x/wasm/keeper/wasmtesting"
-	"github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/x/wasm/keeper"
+	"github.com/civet148/coeus/x/wasm/keeper/wasmtesting"
+	"github.com/civet148/coeus/x/wasm/types"
 )
 
 func TestCountTxDecorator(t *testing.T) {

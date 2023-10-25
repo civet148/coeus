@@ -15,8 +15,8 @@ import (
 	bankkeeper "github.com/cosmos/cosmos-sdk/x/bank/keeper"
 	stakingkeeper "github.com/cosmos/cosmos-sdk/x/staking/keeper"
 
-	"github.com/civet148/coeus-node/x/wasm/keeper/wasmtesting"
-	"github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/x/wasm/keeper/wasmtesting"
+	"github.com/civet148/coeus/x/wasm/types"
 )
 
 func TestConstructorOptions(t *testing.T) {

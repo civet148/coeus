@@ -9,8 +9,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	wasmibctesting "github.com/civet148/coeus-node/x/wasm/ibctesting"
-	wasmkeeper "github.com/civet148/coeus-node/x/wasm/keeper"
+	wasmibctesting "github.com/civet148/coeus/x/wasm/ibctesting"
+	wasmkeeper "github.com/civet148/coeus/x/wasm/keeper"
 )
 
 func TestIBCReflectContract(t *testing.T) {

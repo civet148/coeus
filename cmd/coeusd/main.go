@@ -8,8 +8,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/server"
 	svrcmd "github.com/cosmos/cosmos-sdk/server/cmd"
 
-	"github.com/civet148/coeus-node/app"
-	"github.com/civet148/coeus-node/cmd/coeusd/cmd"
+	"github.com/civet148/coeus/app"
+	"github.com/civet148/coeus/cmd/coeusd/cmd"
 )
 
 const (

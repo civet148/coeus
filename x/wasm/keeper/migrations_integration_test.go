@@ -11,8 +11,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	upgradetypes "github.com/cosmos/cosmos-sdk/x/upgrade/types"
 
-	"github.com/civet148/coeus-node/app"
-	"github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/app"
+	"github.com/civet148/coeus/x/wasm/types"
 )
 
 func TestModuleMigrations(t *testing.T) {

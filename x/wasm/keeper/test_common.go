@@ -77,9 +77,9 @@ package keeper
 //	upgradetypes "github.com/cosmos/cosmos-sdk/x/upgrade/types"
 //
 //	wasmappparams "github.com/CosmWasm/wasmd/app/params"
-//	"github.com/civet148/coeus-node/x/wasm/keeper/testdata"
-//	"github.com/civet148/coeus-node/x/wasm/keeper/wasmtesting"
-//	"github.com/civet148/coeus-node/x/wasm/types"
+//	"github.com/civet148/coeus/x/wasm/keeper/testdata"
+//	"github.com/civet148/coeus/x/wasm/keeper/wasmtesting"
+//	"github.com/civet148/coeus/x/wasm/types"
 //)
 //
 //var moduleBasics = module.NewBasicManager(

@@ -1,8 +1,8 @@
 package v2
 
 import (
-	"github.com/civet148/coeus-node/x/mint/exported"
-	"github.com/civet148/coeus-node/x/mint/types"
+	"github.com/civet148/coeus/x/mint/exported"
+	"github.com/civet148/coeus/x/mint/types"
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

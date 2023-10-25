@@ -1,8 +1,8 @@
 package coeus
 
 import (
-	"github.com/civet148/coeus-node/x/coeus/keeper"
-	"github.com/civet148/coeus-node/x/coeus/types"
+	"github.com/civet148/coeus/x/coeus/keeper"
+	"github.com/civet148/coeus/x/coeus/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )
 

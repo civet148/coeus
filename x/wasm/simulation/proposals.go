@@ -7,9 +7,9 @@ import (
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 	"github.com/cosmos/cosmos-sdk/x/simulation"
 
-	"github.com/civet148/coeus-node/app/params"
-	"github.com/civet148/coeus-node/x/wasm/keeper/testdata"
-	"github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/app/params"
+	"github.com/civet148/coeus/x/wasm/keeper/testdata"
+	"github.com/civet148/coeus/x/wasm/types"
 )
 
 const (

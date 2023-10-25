@@ -43,8 +43,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/staking/testutil"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	"github.com/civet148/coeus-node/app"
-	wasmkeeper "github.com/civet148/coeus-node/x/wasm/keeper"
+	"github.com/civet148/coeus/app"
+	wasmkeeper "github.com/civet148/coeus/x/wasm/keeper"
 )
 
 var MaxAccounts = 10

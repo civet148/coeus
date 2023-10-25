@@ -20,8 +20,8 @@ import (
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	"github.com/civet148/coeus-node/x/wasm/keeper/testdata"
-	"github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/x/wasm/keeper/testdata"
+	"github.com/civet148/coeus/x/wasm/types"
 )
 
 func TestMaskReflectCustomQuery(t *testing.T) {

@@ -9,10 +9,10 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	moduletestutil "github.com/cosmos/cosmos-sdk/types/module/testutil"
 
-	"github.com/civet148/coeus-node/x/wasm"
-	"github.com/civet148/coeus-node/x/wasm/exported"
-	v2 "github.com/civet148/coeus-node/x/wasm/migrations/v2"
-	"github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/x/wasm"
+	"github.com/civet148/coeus/x/wasm/exported"
+	v2 "github.com/civet148/coeus/x/wasm/migrations/v2"
+	"github.com/civet148/coeus/x/wasm/types"
 )
 
 type mockSubspace struct {

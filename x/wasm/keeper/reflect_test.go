@@ -19,8 +19,8 @@ import (
 	bankkeeper "github.com/cosmos/cosmos-sdk/x/bank/keeper"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 
-	"github.com/civet148/coeus-node/x/wasm/keeper/testdata"
-	"github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/x/wasm/keeper/testdata"
+	"github.com/civet148/coeus/x/wasm/types"
 )
 
 const (

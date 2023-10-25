@@ -1,8 +1,8 @@
 package mint
 
 import (
-	"github.com/civet148/coeus-node/x/mint/keeper"
-	"github.com/civet148/coeus-node/x/mint/types"
+	"github.com/civet148/coeus/x/mint/keeper"
+	"github.com/civet148/coeus/x/mint/types"
 	"github.com/cosmos/cosmos-sdk/telemetry"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"time"

@@ -3,7 +3,7 @@ package types_test
 import (
 	"testing"
 
-	"github.com/civet148/coeus-node/x/coeus/types"
+	"github.com/civet148/coeus/x/coeus/types"
 	"github.com/stretchr/testify/require"
 )
 

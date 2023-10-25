@@ -20,8 +20,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/version"
 	"github.com/cosmos/cosmos-sdk/x/authz"
 
-	"github.com/civet148/coeus-node/x/wasm/ioutils"
-	"github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/x/wasm/ioutils"
+	"github.com/civet148/coeus/x/wasm/types"
 )
 
 const (

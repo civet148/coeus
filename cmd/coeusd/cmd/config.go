@@ -3,7 +3,7 @@ package cmd
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/civet148/coeus-node/app"
+	"github.com/civet148/coeus/app"
 )
 
 func initSDKConfig() {

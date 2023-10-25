@@ -13,8 +13,8 @@ import (
 	snapshot "github.com/cosmos/cosmos-sdk/snapshots/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/civet148/coeus-node/x/wasm/ioutils"
-	"github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/x/wasm/ioutils"
+	"github.com/civet148/coeus/x/wasm/types"
 )
 
 var _ snapshot.ExtensionSnapshotter = &WasmSnapshotter{}

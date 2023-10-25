@@ -1,8 +1,8 @@
 package keeper
 
 import (
-	"github.com/civet148/coeus-node/x/mint/exported"
-	v2 "github.com/civet148/coeus-node/x/mint/migrations/v2"
+	"github.com/civet148/coeus/x/mint/exported"
+	v2 "github.com/civet148/coeus/x/mint/migrations/v2"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )
 

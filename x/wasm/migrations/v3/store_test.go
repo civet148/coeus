@@ -11,11 +11,11 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/address"
 	moduletestutil "github.com/cosmos/cosmos-sdk/types/module/testutil"
 
-	"github.com/civet148/coeus-node/x/wasm"
-	"github.com/civet148/coeus-node/x/wasm/keeper"
-	"github.com/civet148/coeus-node/x/wasm/keeper/wasmtesting"
-	v3 "github.com/civet148/coeus-node/x/wasm/migrations/v3"
-	"github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/x/wasm"
+	"github.com/civet148/coeus/x/wasm/keeper"
+	"github.com/civet148/coeus/x/wasm/keeper/wasmtesting"
+	v3 "github.com/civet148/coeus/x/wasm/migrations/v3"
+	"github.com/civet148/coeus/x/wasm/types"
 )
 
 func TestMigrate3To4(t *testing.T) {

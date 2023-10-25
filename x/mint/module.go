@@ -16,11 +16,11 @@ import (
 
 	"cosmossdk.io/depinject"
 
-	"github.com/civet148/coeus-node/x/mint/client/cli"
-	"github.com/civet148/coeus-node/x/mint/exported"
-	"github.com/civet148/coeus-node/x/mint/keeper"
-	"github.com/civet148/coeus-node/x/mint/simulation"
-	"github.com/civet148/coeus-node/x/mint/types"
+	"github.com/civet148/coeus/x/mint/client/cli"
+	"github.com/civet148/coeus/x/mint/exported"
+	"github.com/civet148/coeus/x/mint/keeper"
+	"github.com/civet148/coeus/x/mint/simulation"
+	"github.com/civet148/coeus/x/mint/types"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/codec"
 	cdctypes "github.com/cosmos/cosmos-sdk/codec/types"

@@ -2,7 +2,7 @@ package testutil
 
 import (
 	"cosmossdk.io/core/appconfig"
-	_ "github.com/civet148/coeus-node/x/mint"
+	_ "github.com/civet148/coeus/x/mint"
 	_ "github.com/cosmos/cosmos-sdk/x/auth"
 	_ "github.com/cosmos/cosmos-sdk/x/auth/tx/config"
 	_ "github.com/cosmos/cosmos-sdk/x/bank"
@@ -11,7 +11,7 @@ import (
 	_ "github.com/cosmos/cosmos-sdk/x/params"
 	_ "github.com/cosmos/cosmos-sdk/x/staking"
 
-	minttypes "github.com/civet148/coeus-node/x/mint/types"
+	minttypes "github.com/civet148/coeus/x/mint/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	consensustypes "github.com/cosmos/cosmos-sdk/x/consensus/types"

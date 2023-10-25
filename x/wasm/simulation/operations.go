@@ -18,10 +18,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/auth/tx"
 	"github.com/cosmos/cosmos-sdk/x/simulation"
 
-	"github.com/civet148/coeus-node/app/params"
-	wasmkeeper "github.com/civet148/coeus-node/x/wasm/keeper"
-	"github.com/civet148/coeus-node/x/wasm/keeper/testdata"
-	"github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/civet148/coeus/app/params"
+	wasmkeeper "github.com/civet148/coeus/x/wasm/keeper"
+	"github.com/civet148/coeus/x/wasm/keeper/testdata"
+	"github.com/civet148/coeus/x/wasm/types"
 )
 
 // Simulation operation weights constants
@@ -481,9 +481,9 @@ func BuildOperationInput(
 	app *baseapp.BaseApp,
 	ctx sdk.Context,
 	msg interface {
-	sdk.Msg
-	Type() string
-},
+		sdk.Msg
+		Type() string
+	},
 	simAccount simtypes.Account,
 	ak types.AccountKeeper,
 	bk BankKeeper,
