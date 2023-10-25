@@ -2,6 +2,12 @@ package cmd
 
 import (
 	"errors"
+	"github.com/civet148/coeus-node/app"
+	"github.com/civet148/coeus-node/x/wasm"
+	wasmkeeper "github.com/civet148/coeus-node/x/wasm/keeper"
+	wasmtypes "github.com/civet148/coeus-node/x/wasm/types"
+	"github.com/prometheus/client_golang/prometheus"
+	"github.com/spf13/viper"
 	"io"
 	"os"
 	"path/filepath"
@@ -38,8 +44,8 @@ import (
 	"github.com/spf13/pflag"
 	// this line is used by starport scaffolding # root/moduleImport
 
-	"github.com/civet148/coeus-node/app"
 	appparams "github.com/civet148/coeus-node/app/params"
+	wasmcli "github.com/civet148/coeus-node/x/wasm/client/cli"
 )
 
 // NewRootCmd creates a new root command for a Cosmos SDK application
@@ -124,7 +130,7 @@ func initRootCmd(
 		config.Cmd(),
 		// this line is used by starport scaffolding # root/commands
 	)
-
+	wasmcli.ExtendUnsafeResetAllCmd(rootCmd)
 	a := appCreator{
 		encodingConfig,
 	}
@@ -186,11 +192,13 @@ func txCommand() *cobra.Command {
 		authcmd.GetSignCommand(),
 		authcmd.GetSignBatchCommand(),
 		authcmd.GetMultiSignCommand(),
+		authcmd.GetMultiSignBatchCmd(),
 		authcmd.GetValidateSignaturesCommand(),
 		flags.LineBreak,
 		authcmd.GetBroadcastCommand(),
 		authcmd.GetEncodeCommand(),
 		authcmd.GetDecodeCommand(),
+		authcmd.GetAuxToFeeCommand(),
 	)
 
 	app.ModuleBasics.AddTxCommands(cmd)
@@ -201,6 +209,7 @@ func txCommand() *cobra.Command {
 
 func addModuleInitFlags(startCmd *cobra.Command) {
 	crisis.AddModuleInitFlags(startCmd)
+	wasm.AddModuleInitFlags(startCmd)
 	// this line is used by starport scaffolding # root/arguments
 }
 
@@ -273,7 +282,10 @@ func (a appCreator) newApp(
 		cast.ToUint64(appOpts.Get(server.FlagStateSyncSnapshotInterval)),
 		cast.ToUint32(appOpts.Get(server.FlagStateSyncSnapshotKeepRecent)),
 	)
-
+	var wasmOpts []wasmkeeper.Option
+	if cast.ToBool(appOpts.Get("telemetry.enabled")) {
+		wasmOpts = append(wasmOpts, wasmkeeper.WithVMCacheMetrics(prometheus.DefaultRegisterer))
+	}
 	return app.New(
 		logger,
 		db,
@@ -284,6 +296,7 @@ func (a appCreator) newApp(
 		cast.ToUint(appOpts.Get(server.FlagInvCheckPeriod)),
 		a.encodingConfig,
 		appOpts,
+		wasmOpts,
 		baseapp.SetPruning(pruningOpts),
 		baseapp.SetMinGasPrices(cast.ToString(appOpts.Get(server.FlagMinGasPrices))),
 		baseapp.SetHaltHeight(cast.ToUint64(appOpts.Get(server.FlagHaltHeight))),
@@ -314,6 +327,15 @@ func (a appCreator) appExport(
 	if !ok || homePath == "" {
 		return servertypes.ExportedApp{}, errors.New("application home not set")
 	}
+	viperAppOpts, ok := appOpts.(*viper.Viper)
+	if !ok {
+		return servertypes.ExportedApp{}, errors.New("appOpts is not viper.Viper")
+	}
+	// overwrite the FlagInvCheckPeriod
+	viperAppOpts.Set(server.FlagInvCheckPeriod, 1)
+	appOpts = viperAppOpts
+
+	var emptyWasmOpts []wasmkeeper.Option
 
 	app := app.New(
 		logger,
@@ -325,6 +347,7 @@ func (a appCreator) appExport(
 		uint(1),
 		a.encodingConfig,
 		appOpts,
+		emptyWasmOpts,
 	)
 
 	if height != -1 {
@@ -343,6 +366,7 @@ func initAppConfig() (string, interface{}) {
 
 	type CustomAppConfig struct {
 		serverconfig.Config
+		Wasm wasmtypes.WasmConfig `mapstructure:"wasm"`
 	}
 
 	// Optionally allow the chain developer to overwrite the SDK's default
@@ -361,11 +385,14 @@ func initAppConfig() (string, interface{}) {
 	//
 	// In simapp, we set the min gas prices to 0.
 	srvCfg.MinGasPrices = "0stake"
+	// srvCfg.BaseConfig.IAVLDisableFastNode = true // disable fastnode by default
 
 	customAppConfig := CustomAppConfig{
 		Config: *srvCfg,
+		Wasm:   wasmtypes.DefaultWasmConfig(),
 	}
-	customAppTemplate := serverconfig.DefaultConfigTemplate
+	customAppTemplate := serverconfig.DefaultConfigTemplate +
+		wasmtypes.DefaultConfigTemplate()
 
 	return customAppTemplate, customAppConfig
 }
