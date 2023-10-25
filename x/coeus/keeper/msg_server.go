@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"coeus/x/coeus/types"
+	"github.com/civet148/coeus-node/x/coeus/types"
 )
 
 type msgServer struct {

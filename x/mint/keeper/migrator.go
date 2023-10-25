@@ -1,9 +1,9 @@
 package keeper
 
 import (
+	"github.com/civet148/coeus-node/x/mint/exported"
+	v2 "github.com/civet148/coeus-node/x/mint/migrations/v2"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"coeus/x/mint/exported"
-	v2 "coeus/x/mint/migrations/v2"
 )
 
 // Migrator is a struct for handling in-place state migrations.

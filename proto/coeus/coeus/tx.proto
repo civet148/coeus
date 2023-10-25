@@ -1,7 +1,7 @@
 syntax = "proto3";
 package coeus.coeus;
 
-option go_package = "coeus/x/coeus/types";
+option go_package = "github.com/civet148/coeus-node/x/coeus/types";
 
 // Msg defines the Msg service.
 service Msg {}

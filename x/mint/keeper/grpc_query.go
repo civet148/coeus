@@ -3,8 +3,8 @@ package keeper
 import (
 	"context"
 
+	"github.com/civet148/coeus-node/x/mint/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"coeus/x/mint/types"
 )
 
 var _ types.QueryServer = Keeper{}

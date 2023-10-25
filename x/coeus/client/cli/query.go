@@ -10,7 +10,7 @@ import (
 	// "github.com/cosmos/cosmos-sdk/client/flags"
 	// sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"coeus/x/coeus/types"
+	"github.com/civet148/coeus-node/x/coeus/types"
 )
 
 // GetQueryCmd returns the cli query commands for this module

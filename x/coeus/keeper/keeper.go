@@ -9,7 +9,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	paramtypes "github.com/cosmos/cosmos-sdk/x/params/types"
 
-	"coeus/x/coeus/types"
+	"github.com/civet148/coeus-node/x/coeus/types"
 )
 
 type (

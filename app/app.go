@@ -7,11 +7,11 @@ import (
 	"os"
 	"path/filepath"
 
-	"coeus/x/mint"
-	mintkeeper "coeus/x/mint/keeper"
-	minttypes "coeus/x/mint/types"
 	autocliv1 "cosmossdk.io/api/cosmos/autocli/v1"
 	reflectionv1 "cosmossdk.io/api/cosmos/reflection/v1"
+	"github.com/civet148/coeus-node/x/mint"
+	mintkeeper "github.com/civet148/coeus-node/x/mint/keeper"
+	minttypes "github.com/civet148/coeus-node/x/mint/types"
 	dbm "github.com/cometbft/cometbft-db"
 	abci "github.com/cometbft/cometbft/abci/types"
 	"github.com/cometbft/cometbft/libs/log"
@@ -110,13 +110,13 @@ import (
 	ibctm "github.com/cosmos/ibc-go/v7/modules/light-clients/07-tendermint"
 	"github.com/spf13/cast"
 
-	coeusmodule "coeus/x/coeus"
-	coeusmodulekeeper "coeus/x/coeus/keeper"
-	coeusmoduletypes "coeus/x/coeus/types"
+	coeusmodule "github.com/civet148/coeus-node/x/coeus"
+	coeusmodulekeeper "github.com/civet148/coeus-node/x/coeus/keeper"
+	coeusmoduletypes "github.com/civet148/coeus-node/x/coeus/types"
 	// this line is used by starport scaffolding # stargate/app/moduleImport
 
-	appparams "coeus/app/params"
-	"coeus/docs"
+	appparams "github.com/civet148/coeus-node/app/params"
+	"github.com/civet148/coeus-node/docs"
 )
 
 const (

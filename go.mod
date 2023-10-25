@@ -1,4 +1,4 @@
-module coeus
+module github.com/civet148/coeus-node
 
 go 1.19
 

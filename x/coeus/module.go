@@ -11,9 +11,9 @@ import (
 
 	abci "github.com/cometbft/cometbft/abci/types"
 
-	"coeus/x/coeus/client/cli"
-	"coeus/x/coeus/keeper"
-	"coeus/x/coeus/types"
+	"github.com/civet148/coeus-node/x/coeus/client/cli"
+	"github.com/civet148/coeus-node/x/coeus/keeper"
+	"github.com/civet148/coeus-node/x/coeus/types"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/codec"
 	cdctypes "github.com/cosmos/cosmos-sdk/codec/types"

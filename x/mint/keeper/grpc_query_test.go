@@ -7,16 +7,16 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/suite"
 
+	"github.com/civet148/coeus-node/x/mint"
+	"github.com/civet148/coeus-node/x/mint/keeper"
+	minttestutil "github.com/civet148/coeus-node/x/mint/testutil"
+	"github.com/civet148/coeus-node/x/mint/types"
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	"github.com/cosmos/cosmos-sdk/testutil"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	moduletestutil "github.com/cosmos/cosmos-sdk/types/module/testutil"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
-	"coeus/x/mint"
-	"coeus/x/mint/keeper"
-	minttestutil "coeus/x/mint/testutil"
-	"coeus/x/mint/types"
 )
 
 type MintTestSuite struct {

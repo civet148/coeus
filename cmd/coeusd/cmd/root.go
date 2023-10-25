@@ -38,8 +38,8 @@ import (
 	"github.com/spf13/pflag"
 	// this line is used by starport scaffolding # root/moduleImport
 
-	"coeus/app"
-	appparams "coeus/app/params"
+	"github.com/civet148/coeus-node/app"
+	appparams "github.com/civet148/coeus-node/app/params"
 )
 
 // NewRootCmd creates a new root command for a Cosmos SDK application

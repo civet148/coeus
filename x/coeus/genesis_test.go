@@ -3,10 +3,10 @@ package coeus_test
 import (
 	"testing"
 
-	keepertest "coeus/testutil/keeper"
-	"coeus/testutil/nullify"
-	"coeus/x/coeus"
-	"coeus/x/coeus/types"
+	keepertest "github.com/civet148/coeus-node/testutil/keeper"
+	"github.com/civet148/coeus-node/testutil/nullify"
+	"github.com/civet148/coeus-node/x/coeus"
+	"github.com/civet148/coeus-node/x/coeus/types"
 	"github.com/stretchr/testify/require"
 )
 

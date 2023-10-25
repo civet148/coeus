@@ -3,9 +3,9 @@ package coeus
 import (
 	"math/rand"
 
-	"coeus/testutil/sample"
-	coeussimulation "coeus/x/coeus/simulation"
-	"coeus/x/coeus/types"
+	"github.com/civet148/coeus-node/testutil/sample"
+	coeussimulation "github.com/civet148/coeus-node/x/coeus/simulation"
+	"github.com/civet148/coeus-node/x/coeus/types"
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"

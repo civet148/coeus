@@ -18,7 +18,7 @@ import (
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	"github.com/stretchr/testify/require"
 
-	"coeus/app"
+	"github.com/civet148/coeus-node/app"
 )
 
 type (

@@ -5,13 +5,13 @@ import (
 
 	"github.com/stretchr/testify/require"
 
+	"github.com/civet148/coeus-node/x/mint"
+	"github.com/civet148/coeus-node/x/mint/exported"
+	v2 "github.com/civet148/coeus-node/x/mint/migrations/v2"
+	"github.com/civet148/coeus-node/x/mint/types"
 	"github.com/cosmos/cosmos-sdk/testutil"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	moduletestutil "github.com/cosmos/cosmos-sdk/types/module/testutil"
-	"coeus/x/mint"
-	"coeus/x/mint/exported"
-	v2 "coeus/x/mint/migrations/v2"
-	"coeus/x/mint/types"
 )
 
 type mockSubspace struct {

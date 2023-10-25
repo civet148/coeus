@@ -3,10 +3,10 @@ package simulation
 import (
 	"math/rand"
 
+	"github.com/civet148/coeus-node/x/mint/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/address"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
-	"coeus/x/mint/types"
 	"github.com/cosmos/cosmos-sdk/x/simulation"
 )
 

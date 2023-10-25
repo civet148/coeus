@@ -3,10 +3,10 @@ package keeper
 import (
 	"context"
 
+	"github.com/civet148/coeus-node/x/mint/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/errors"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
-	"coeus/x/mint/types"
 )
 
 var _ types.MsgServer = msgServer{}

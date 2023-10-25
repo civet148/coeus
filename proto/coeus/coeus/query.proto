@@ -6,7 +6,7 @@ import "google/api/annotations.proto";
 import "cosmos/base/query/v1beta1/pagination.proto";
 import "coeus/coeus/params.proto";
 
-option go_package = "coeus/x/coeus/types";
+option go_package = "github.com/civet148/coeus-node/x/coeus/types";
 
 // Query defines the gRPC querier service.
 service Query {

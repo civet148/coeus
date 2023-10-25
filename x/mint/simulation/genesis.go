@@ -8,9 +8,9 @@ import (
 	"math/rand"
 
 	"cosmossdk.io/math"
+	"github.com/civet148/coeus-node/x/mint/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
-	"coeus/x/mint/types"
 )
 
 // Simulation parameter constants

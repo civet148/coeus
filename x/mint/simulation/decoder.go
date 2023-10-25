@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"fmt"
 
+	"github.com/civet148/coeus-node/x/mint/types"
 	"github.com/cosmos/cosmos-sdk/codec"
 	"github.com/cosmos/cosmos-sdk/types/kv"
-	"coeus/x/mint/types"
 )
 
 // NewDecodeStore returns a decoder function closure that unmarshals the KVPair's

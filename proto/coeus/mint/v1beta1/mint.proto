@@ -1,7 +1,7 @@
 syntax = "proto3";
 package coeus.mint.v1beta1;
 
-option go_package = "coeus/x/mint/types";
+option go_package = "github.com/civet148/coeus-node/x/mint/types";
 
 import "gogoproto/gogo.proto";
 import "cosmos_proto/cosmos.proto";

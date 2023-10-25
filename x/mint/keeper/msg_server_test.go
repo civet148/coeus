@@ -1,8 +1,8 @@
 package keeper_test
 
 import (
+	"github.com/civet148/coeus-node/x/mint/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"coeus/x/mint/types"
 )
 
 func (s *IntegrationTestSuite) TestUpdateParams() {
