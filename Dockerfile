@@ -1,4 +1,4 @@
-FROM golang:latest AS builder
+FROM golang:1.21 AS builder
 MAINTAINER libin <civet148@126.com>
 
 ENV SRC_DIR /code
