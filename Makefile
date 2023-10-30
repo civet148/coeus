@@ -12,4 +12,4 @@ build:
 BINS+=coeusd
 
 docker:
-	make build && docker build --tag coeus-node -f ./Dockerfile .
+	docker build --tag coeus-node -f ./Dockerfile .
