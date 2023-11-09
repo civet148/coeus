@@ -1,4 +1,6 @@
 version: 1
+build:
+  binary: coeusd
 accounts:
 - name: validator0
   coins:
@@ -26,7 +28,7 @@ client:
 validators:
 - name: validator0
   bonded: 200000000000uhby
-  home: ""
+  home: "/data/.coeus"
   app:
      minimum-gas-prices: "0.000002ushby,0.000002uhby"
      api:
@@ -56,6 +58,9 @@ validators:
          prometheus: true
          prometheus_listen_addr: ":26660"
 genesis:
+  chain_id: "coeus"
+  initial_height: "1"
+  genesis_time: "2023-11-09T07:46:56.293077949Z"
   consensus_params:
     block:
       max_gas: "10000000000"
