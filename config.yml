@@ -28,7 +28,7 @@ client:
 validators:
 - name: validator0
   bonded: 200000000000uhby
-  home: "/data/.coeus"
+  home: "$HOME/.coeus"
   app:
      minimum-gas-prices: "0.000002ushby,0.000002uhby"
      api:
